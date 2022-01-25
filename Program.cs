@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace NimDot
+﻿namespace NimDot
 {
     class Program
     {
