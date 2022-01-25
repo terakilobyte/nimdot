@@ -1,3 +1,6 @@
+using System;
+using System.Threading;
+
 public class Nim
 {
     enum Player
@@ -63,7 +66,8 @@ public class Nim
         }
         else
         {
-            choice = total % 4 != 0 ? 4 - (total % 4) : Random.Shared.Next(1, 4); ;
+            var rand = new Random();
+            choice = total % 4 != 0 ? 4 - (total % 4) : rand.Next(1, 4); ;
         }
         total += choice;
         Console.WriteLine("I chose {0}. The total is now {1}.", choice, total);
